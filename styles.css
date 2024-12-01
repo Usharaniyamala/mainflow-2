@@ -1,0 +1,197 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container for consistent layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/* Breeds Section */
+.breeds {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.breeds h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.breed-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Individual breed cards */
+.breed {
+    width: 22%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.breed:hover {
+    transform: scale(1.05);
+}
+
+.breed img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.breed h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.breed p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Shop Names Section */
+.shop-names {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.shop-names h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.shop-names ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shop-names li {
+    font-size: 1.3em;
+    margin: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-names li:hover {
+    background-color: #e14e43;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .breed-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .breed {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .shop-names ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-names li {
+        font-size: 1.1em;
+        margin: 10px 0;
+        padding: 12px 20px;
+    }
+}
+
+/* Tablets (600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .breed {
+        width: 45%;
+    }
+
+    .shop-names li {
+        font-size: 1.2em;
+    }
+
+    .shop-names ul {
+        justify-content: space-between;
+    }
+}
+
+/* Larger screens (above 900px) */
+@media (min-width: 901px) {
+    .breed {
+        width: 22%;
+    }
+
+    .shop-names ul {
+        justify-content: center;
+    }
+}
